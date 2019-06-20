@@ -19,6 +19,10 @@ const Page = db.define('page', {
   } 
 })
 
+Page.beforeCreate((pageInstance) => {
+  pageInstance.title
+})
+
 const User = db.define('user', {
   name: {
     type: Sequelize.STRING,
